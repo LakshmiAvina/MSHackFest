@@ -1,46 +1,17 @@
-<script src="https://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script><script type="text/javascript">
-$(function(){
-
-       $.ajax({
-
-        url: "https://unileverdev.sharepoint.com/sites/DevServices/UnileverCatalogue/_api/web/lists/GetByTitle('I Need To')/items?$top=4",
-
-        type: "GET",               
-
-        headers: {
-
-            "Accept": "application/json;odata=verbose",
-
-        },
-
-        success: function (data) {
-				var trHTML = '';
-			            $.each(data.d.results, function(d){
-						console.log(data.d.results[d].AppCategory)
-						trHTML += '<div><a href="' + data.d.results[d].AppURL.Url + '">'+ data.d.results[d].Title + '</a></div><br/>';
-                });
-	
-		$('#Links').append(trHTML);				
-
-        },
-
-        error: function (data) {
-
-            $.each(data.d.results, function(){
-                    console.log("hit")
-                });  
-
-        }
-
-    });    
-
-});
-
-</script>
-
-
-<br/>
-
+<!DOCTYPE html>
+<html>
+<body>
 <div id="Links">
 
-</div>
+<div>
+<a href="https://unilever.csod.com">Accede a My Learning</a></div>
+<br>
+<div><a href="https://unilever.csod.com">Access My Learning</a></div>
+<br><div><a href="https://www.unileverconferencing.com/#">Access / Book Audio Conferencing</a></div>
+<br>
+<div><a href="http://logicsuite.unilever.com/">Access Logicsuite</a></div>
+<br></div>
+
+</body>
+</html>
+
